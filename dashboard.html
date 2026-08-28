@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard | AI Cognitive Care</title>
+
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+
+<body>
+
+    <!-- ==============================
+         NAVBAR
+    =============================== -->
+
+    <header class="navbar">
+
+        <div class="logo">
+            🧠 AI Cognitive Care
+        </div>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="games.html">Games</a>
+        </nav>
+
+    </header>
+
+
+    <!-- ==============================
+         DASHBOARD
+    =============================== -->
+
+    <main class="dashboard">
+
+
+        <!-- WELCOME -->
+
+        <section class="welcome">
+
+            <div>
+
+                <p class="tag">
+                    PATIENT DASHBOARD
+                </p>
+
+                <h1>
+                    Welcome Back! 👋
+                </h1>
+
+                <p>
+                    Ready to train your memory and keep your mind active?
+                </p>
+
+            </div>
+
+            <div class="brain-icon">
+                🧠
+            </div>
+
+        </section>
+
+
+        <!-- ==============================
+             STATISTICS
+        =============================== -->
+
+        <section class="stats">
+
+
+            <!-- Games Played -->
+
+            <div class="stat-card">
+
+                <div class="stat-icon">
+                    🎮
+                </div>
+
+                <div>
+
+                    <h3 id="gamesPlayed">
+                        0
+                    </h3>
+
+                    <p>
+                        Games Played
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- Best Score -->
+
+            <div class="stat-card">
+
+                <div class="stat-icon">
+                    🏆
+                </div>
+
+                <div>
+
+                    <h3 id="bestScore">
+                        0
+                    </h3>
+
+                    <p>
+                        Best Score
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- Best Time -->
+
+            <div class="stat-card">
+
+                <div class="stat-icon">
+                    ⏱️
+                </div>
+
+                <div>
+
+                    <h3 id="bestTime">
+                        0s
+                    </h3>
+
+                    <p>
+                        Best Time
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- Accuracy -->
+
+            <div class="stat-card">
+
+                <div class="stat-icon">
+                    🎯
+                </div>
+
+                <div>
+
+                    <h3 id="overallAccuracy">
+                        0%
+                    </h3>
+
+                    <p>
+                        Accuracy
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==============================
+             GAMES
+        =============================== -->
+
+        <section class="games-section">
+
+            <div class="section-heading">
+
+                <div>
+
+                    <p class="tag">
+                        COGNITIVE TRAINING
+                    </p>
+
+                    <h2>
+                        Choose a Game
+                    </h2>
+
+                </div>
+
+                
+
+            </div>
+
+
+            <div class="game-container">
+
+
+                <!-- MEMORY GAME -->
+
+                <div class="game-card">
+
+                    <div class="game-image memory">
+                        🧩
+                    </div>
+
+                    <div class="game-content">
+
+                        <h3>
+                            Memory Match
+                        </h3>
+
+                        <p>
+                            Find matching cards and test your memory.
+                        </p>
+
+                        <a href="memory-game.html" class="play-btn">
+                            Play Game →
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- OBJECT RECALL -->
+
+                <div class="game-card">
+
+                    <div class="game-image pattern">
+                        🖼️
+                    </div>
+
+                    <div class="game-content">
+
+                        <h3>
+                            🖼️ Object Recall
+                        </h3>
+
+                        <p>
+                            Remember objects and select them correctly.
+                        </p>
+
+                        <a href="recall-game.html" class="play-btn">
+                            Play Game →
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- NUMBER SEQUENCE -->
+
+                <div class="game-card">
+
+                    <div class="game-image numbers">
+                        🔢
+                    </div>
+
+                    <div class="game-content">
+
+                        
+
+                        <h3>
+                            Number Sequence
+                        </h3>
+
+                        <p>
+                            Complete the number sequence correctly.
+                        </p>
+
+                        <a href="sequence-game.html" class="play-btn">
+                            Play Game →
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- FOCUS GAME -->
+
+                <div class="game-card">
+
+                    <div class="game-image focus">
+                        🎯
+                    </div>
+
+                    <div class="game-content">
+
+                        <h3>
+                            Focus Challenge
+                        </h3>
+
+                        <p>
+                            Improve attention by finding the moving target.
+                        </p>
+
+                        <a href="focus-game.html" class="play-btn">
+                            Play Game →
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==============================
+             PROGRESS
+        =============================== -->
+
+        <section class="progress-section">
+
+            <div class="progress-card">
+
+                <div class="progress-top">
+
+                    <div>
+
+                        <p class="tag">
+                            YOUR PROGRESS
+                        </p>
+
+                        <h2>
+                            Keep Going! 🚀
+                        </h2>
+
+                    </div>
+
+                    <strong id="progressPercent">
+                        0%
+                    </strong>
+
+                </div>
+
+
+                <div class="progress-bar">
+
+                    <div
+                        class="progress-fill"
+                        id="progressFill">
+                    </div>
+
+                </div>
+
+
+                <p class="progress-text">
+                    Play cognitive games regularly to track your
+                    progress and improve your performance.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==============================
+             LAST ACTIVITY
+        =============================== -->
+
+        <section class="progress-section">
+
+            <div class="progress-card">
+
+                <p class="tag">
+                    RECENT ACTIVITY
+                </p>
+
+                <h2 id="lastGame">
+                    No game played yet
+                </h2>
+
+                <p class="progress-text">
+                    Last Activity:
+                    <strong id="lastActivity">
+                        —
+                    </strong>
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ==============================
+         FOOTER
+    =============================== -->
+
+    <footer>
+
+        <p>
+            © 2026 AI Cognitive Care |
+            Keep Your Mind Active 🧠
+        </p>
+
+    </footer>
+
+
+    <!-- ==============================
+         DASHBOARD JAVASCRIPT
+    =============================== -->
+
+    <script>
+
+        // ======================================
+        // GET NUMBER FROM LOCAL STORAGE
+        // ======================================
+
+        function getNumber(key) {
+
+            const value =
+                localStorage.getItem(key);
+
+            if (
+                value === null ||
+                value === "" ||
+                isNaN(Number(value))
+            ) {
+
+                return 0;
+
+            }
+
+            return Number(value);
+
+        }
+
+
+        // ======================================
+        // GAME DATA
+        // ======================================
+
+        const memoryScore =
+            getNumber("memoryScore");
+
+        const recallScore =
+            getNumber("recallScore");
+
+        const sequenceScore =
+            getNumber("sequenceScore");
+
+        const focusScore =
+            getNumber("focusScore");
+
+
+        const memoryAccuracy =
+            getNumber("memoryAccuracy");
+
+        const recallAccuracy =
+            getNumber("recallAccuracy");
+
+        const sequenceAccuracy =
+            getNumber("sequenceAccuracy");
+
+        const focusAccuracy =
+            getNumber("focusAccuracy");
+
+
+        const memoryTime =
+            getNumber("memoryTime");
+
+        const recallTime =
+            getNumber("recallTime");
+
+        const sequenceTime =
+            getNumber("sequenceTime");
+
+        const focusTime =
+            getNumber("focusTime");
+
+
+        // ======================================
+        // GAMES PLAYED
+        // ======================================
+
+        let gamesPlayed = 0;
+
+
+        if (
+            localStorage.getItem(
+                "memoryCompleted"
+            ) === "true"
+        ) {
+
+            gamesPlayed++;
+
+        }
+
+
+        if (
+            localStorage.getItem(
+                "recallCompleted"
+            ) === "true"
+        ) {
+
+            gamesPlayed++;
+
+        }
+
+
+        if (
+            localStorage.getItem(
+                "sequenceCompleted"
+            ) === "true"
+        ) {
+
+            gamesPlayed++;
+
+        }
+
+
+        if (
+            localStorage.getItem(
+                "focusCompleted"
+            ) === "true"
+        ) {
+
+            gamesPlayed++;
+
+        }
+
+
+        document.getElementById(
+            "gamesPlayed"
+        ).textContent =
+            gamesPlayed;
+
+
+        // ======================================
+        // BEST SCORE
+        // ======================================
+
+        const scores = [
+
+            memoryScore,
+            recallScore,
+            sequenceScore,
+            focusScore
+
+        ].filter(function (value) {
+
+            return value > 0;
+
+        });
+
+
+        let bestScore = 0;
+
+
+        if (scores.length > 0) {
+
+            bestScore =
+                Math.max(...scores);
+
+        }
+
+
+        document.getElementById(
+            "bestScore"
+        ).textContent =
+            bestScore;
+
+
+        // ======================================
+        // BEST TIME
+        // ======================================
+
+        const times = [
+
+            memoryTime,
+            recallTime,
+            sequenceTime,
+            focusTime
+
+        ].filter(function (value) {
+
+            return value > 0;
+
+        });
+
+
+        let bestTime = 0;
+
+
+        if (times.length > 0) {
+
+            bestTime =
+                Math.min(...times);
+
+        }
+
+
+        document.getElementById(
+            "bestTime"
+        ).textContent =
+            bestTime + "s";
+
+
+        // ======================================
+        // OVERALL ACCURACY
+        // ======================================
+
+        const accuracies = [
+
+            memoryAccuracy,
+            recallAccuracy,
+            sequenceAccuracy,
+            focusAccuracy
+
+        ].filter(function (value) {
+
+            return value > 0;
+
+        });
+
+
+        let overallAccuracy = 0;
+
+
+        if (accuracies.length > 0) {
+
+            const totalAccuracy =
+                accuracies.reduce(
+                    function (total, value) {
+
+                        return total + value;
+
+                    },
+                    0
+                );
+
+
+            overallAccuracy =
+                Math.round(
+                    totalAccuracy /
+                    accuracies.length
+                );
+
+        }
+
+
+        document.getElementById(
+            "overallAccuracy"
+        ).textContent =
+            overallAccuracy + "%";
+
+
+        // ======================================
+        // PROGRESS
+        // ======================================
+
+        const progress =
+            Math.round(
+                (gamesPlayed / 4) * 100
+            );
+
+
+        const finalProgress =
+            Math.min(progress, 100);
+
+
+        document.getElementById(
+            "progressPercent"
+        ).textContent =
+            finalProgress + "%";
+
+
+        document.getElementById(
+            "progressFill"
+        ).style.width =
+            finalProgress + "%";
+
+
+        // ======================================
+        // LAST ACTIVITY
+        // ======================================
+
+        const lastGame =
+            localStorage.getItem(
+                "lastGame"
+            );
+
+
+        const lastActivity =
+            localStorage.getItem(
+                "lastActivity"
+            );
+
+
+        if (lastGame) {
+
+            document.getElementById(
+                "lastGame"
+            ).textContent =
+                lastGame;
+
+        }
+
+
+        if (lastActivity) {
+
+            document.getElementById(
+                "lastActivity"
+            ).textContent =
+                lastActivity;
+
+        }
+
+    </script>
+
+</body>
+
+</html>

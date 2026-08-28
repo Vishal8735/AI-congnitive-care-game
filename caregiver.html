@@ -1,0 +1,1073 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Caregiver Dashboard | AI Cognitive Care</title>
+
+    <link
+        rel="stylesheet"
+        href="caregiver.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- ======================================
+         HEADER
+    ======================================= -->
+
+    <header class="topbar">
+
+        <div class="logo">
+            🧠 AI Cognitive Care
+        </div>
+
+        <nav>
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="dashboard.html">
+                Patient Dashboard
+            </a>
+
+            <a href="games.html">
+                Games
+            </a>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- ======================================
+         MAIN DASHBOARD
+    ======================================= -->
+
+    <main class="dashboard">
+
+
+        <!-- ==================================
+             WELCOME
+        =================================== -->
+
+        <section class="welcome">
+
+            <p class="tag">
+                CAREGIVER DASHBOARD
+            </p>
+
+            <h1>
+                Patient Progress 👋
+            </h1>
+
+            <p>
+                Monitor cognitive training performance
+                and recent game activity.
+            </p>
+
+        </section>
+
+
+
+        <!-- ==================================
+             PATIENT
+        =================================== -->
+
+        <section class="patient-card">
+
+            <div class="patient-avatar">
+                👴
+            </div>
+
+            <div class="patient-info">
+
+                <span>
+                    PATIENT
+                </span>
+
+                <h2>
+                    Demo Patient
+                </h2>
+
+                <p>
+                    Cognitive Training Profile
+                </p>
+
+            </div>
+
+            <div
+                class="status active"
+                id="patientStatus">
+
+                Active
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ==================================
+             MAIN STATISTICS
+        =================================== -->
+
+        <section class="stats">
+
+
+            <!-- Games Completed -->
+
+            <div class="stat-card">
+
+                <div class="stat-icon">
+                    🎮
+                </div>
+
+                <p>
+                    Games Completed
+                </p>
+
+                <h2 id="gamesCompleted">
+                    0
+                </h2>
+
+            </div>
+
+
+            <!-- Best Score -->
+
+            <div class="stat-card">
+
+                <div class="stat-icon">
+                    🏆
+                </div>
+
+                <p>
+                    Best Score
+                </p>
+
+                <h2 id="bestScore">
+                    0
+                </h2>
+
+            </div>
+
+
+            <!-- Accuracy -->
+
+            <div class="stat-card">
+
+                <div class="stat-icon">
+                    🎯
+                </div>
+
+                <p>
+                    Overall Accuracy
+                </p>
+
+                <h2 id="overallAccuracy">
+                    0%
+                </h2>
+
+            </div>
+
+
+            <!-- Best Time -->
+
+            <div class="stat-card">
+
+                <div class="stat-icon">
+                    ⏱️
+                </div>
+
+                <p>
+                    Best Time
+                </p>
+
+                <h2 id="bestTime">
+                    0s
+                </h2>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ==================================
+             GAME PERFORMANCE
+        =================================== -->
+
+        <section class="panel">
+
+            <div class="panel-heading">
+
+                <h2>
+                    Game Performance
+                </h2>
+
+                <span class="period">
+                    All Games
+                </span>
+
+            </div>
+
+
+
+            <!-- MEMORY -->
+
+            <div class="progress-item">
+
+                <div class="progress-title">
+
+                    <span>
+                        🧩 Memory Match
+                    </span>
+
+                    <strong id="memoryProgress">
+                        Not Played
+                    </strong>
+
+                </div>
+
+                <div class="progress-bar">
+
+                    <div
+                        class="progress-fill"
+                        id="memoryBar">
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- RECALL -->
+
+            <div class="progress-item">
+
+                <div class="progress-title">
+
+                    <span>
+                        🖼️ Object Recall
+                    </span>
+
+                    <strong id="recallProgress">
+                        Not Played
+                    </strong>
+
+                </div>
+
+                <div class="progress-bar">
+
+                    <div
+                        class="progress-fill"
+                        id="recallBar">
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- SEQUENCE -->
+
+            <div class="progress-item">
+
+                <div class="progress-title">
+
+                    <span>
+                        🔢 Number Sequence
+                    </span>
+
+                    <strong id="sequenceProgress">
+                        Not Played
+                    </strong>
+
+                </div>
+
+                <div class="progress-bar">
+
+                    <div
+                        class="progress-fill"
+                        id="sequenceBar">
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- FOCUS -->
+
+            <div class="progress-item">
+
+                <div class="progress-title">
+
+                    <span>
+                        🎯 Focus Challenge
+                    </span>
+
+                    <strong id="focusProgress">
+                        Not Played
+                    </strong>
+
+                </div>
+
+                <div class="progress-bar">
+
+                    <div
+                        class="progress-fill"
+                        id="focusBar">
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ==================================
+             ACTIVITY TABLE
+        =================================== -->
+
+        <section class="panel">
+
+            <div class="panel-heading">
+
+                <h2>
+                    Game Activity
+                </h2>
+
+                <span class="period">
+                    Latest Results
+                </span>
+
+            </div>
+
+
+            <div class="activity-table">
+
+
+                <!-- TABLE HEADER -->
+
+                <div class="table-row table-head">
+
+                    <span>
+                        Game
+                    </span>
+
+                    <span>
+                        Score
+                    </span>
+
+                    <span>
+                        Accuracy
+                    </span>
+
+                    <span>
+                        Status
+                    </span>
+
+                </div>
+
+
+
+                <!-- MEMORY ROW -->
+
+                <div class="table-row">
+
+                    <span>
+                        🧩 Memory Match
+                    </span>
+
+                    <span id="memoryScore">
+                        —
+                    </span>
+
+                    <span id="memoryAccuracy">
+                        —
+                    </span>
+
+                    <span
+                        id="memoryStatus"
+                        class="not-played">
+
+                        Not Played
+
+                    </span>
+
+                </div>
+
+
+
+                <!-- RECALL ROW -->
+
+                <div class="table-row">
+
+                    <span>
+                        🖼️ Object Recall
+                    </span>
+
+                    <span id="recallScore">
+                        —
+                    </span>
+
+                    <span id="recallAccuracy">
+                        —
+                    </span>
+
+                    <span
+                        id="recallStatus"
+                        class="not-played">
+
+                        Not Played
+
+                    </span>
+
+                </div>
+
+
+
+                <!-- SEQUENCE ROW -->
+
+                <div class="table-row">
+
+                    <span>
+                        🔢 Number Sequence
+                    </span>
+
+                    <span id="sequenceScore">
+                        —
+                    </span>
+
+                    <span id="sequenceAccuracy">
+                        —
+                    </span>
+
+                    <span
+                        id="sequenceStatus"
+                        class="not-played">
+
+                        Not Played
+
+                    </span>
+
+                </div>
+
+
+
+                <!-- FOCUS ROW -->
+
+                <div class="table-row">
+
+                    <span>
+                        🎯 Focus Challenge
+                    </span>
+
+                    <span id="focusScore">
+                        —
+                    </span>
+
+                    <span id="focusAccuracy">
+                        —
+                    </span>
+
+                    <span
+                        id="focusStatus"
+                        class="not-played">
+
+                        Not Played
+
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ==================================
+             RECOMMENDATION
+        =================================== -->
+
+        <section class="recommendation">
+
+            <div class="recommend-icon">
+                💡
+            </div>
+
+            <div>
+
+                <p class="tag">
+                    RECOMMENDATION
+                </p>
+
+                <h2 id="recommendationTitle">
+                    Keep Practicing
+                </h2>
+
+                <p id="recommendationText">
+                    Encourage regular cognitive game
+                    practice to track progress over time.
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ==================================
+             ACTIONS
+        =================================== -->
+
+        <div class="actions">
+
+            <a
+                href="dashboard.html"
+                class="primary-btn">
+
+                View Patient Dashboard
+
+            </a>
+
+            <a
+                href="games.html"
+                class="secondary-btn">
+
+                View Games
+
+            </a>
+
+        </div>
+
+    </main>
+
+
+
+    <!-- ======================================
+         FOOTER
+    ======================================= -->
+
+    <footer>
+
+        <p>
+            © 2026 AI Cognitive Care |
+            Caregiver Monitoring System 🧠
+        </p>
+
+    </footer>
+
+
+
+    <!-- ======================================
+         JAVASCRIPT
+    ======================================= -->
+
+    <script>
+
+        // ==================================
+        // HELPER
+        // ==================================
+
+        function getNumber(key) {
+
+            const value =
+                localStorage.getItem(key);
+
+            if (
+                value === null ||
+                value === "" ||
+                isNaN(Number(value))
+            ) {
+
+                return 0;
+
+            }
+
+            return Number(value);
+
+        }
+
+
+        // ==================================
+        // GAME DATA
+        // ==================================
+
+        const memory = {
+
+            score: getNumber("memoryScore"),
+
+            accuracy:
+                getNumber("memoryAccuracy"),
+
+            time:
+                getNumber("memoryTime"),
+
+            completed:
+                localStorage.getItem(
+                    "memoryCompleted"
+                ) === "true"
+
+        };
+
+
+        const recall = {
+
+            score: getNumber("recallScore"),
+
+            accuracy:
+                getNumber("recallAccuracy"),
+
+            time:
+                getNumber("recallTime"),
+
+            completed:
+                localStorage.getItem(
+                    "recallCompleted"
+                ) === "true"
+
+        };
+
+
+        const sequence = {
+
+            score:
+                getNumber("sequenceScore"),
+
+            accuracy:
+                getNumber("sequenceAccuracy"),
+
+            time:
+                getNumber("sequenceTime"),
+
+            completed:
+                localStorage.getItem(
+                    "sequenceCompleted"
+                ) === "true"
+
+        };
+
+
+        const focus = {
+
+            score:
+                getNumber("focusScore"),
+
+            accuracy:
+                getNumber("focusAccuracy"),
+
+            time:
+                getNumber("focusTime"),
+
+            completed:
+                localStorage.getItem(
+                    "focusCompleted"
+                ) === "true"
+
+        };
+
+
+
+        // ==================================
+        // GAMES COMPLETED
+        // ==================================
+
+        const games = [
+            memory,
+            recall,
+            sequence,
+            focus
+        ];
+
+
+        const completedGames =
+            games.filter(function (game) {
+
+                return game.completed;
+
+            }).length;
+
+
+        document.getElementById(
+            "gamesCompleted"
+        ).textContent =
+            completedGames;
+
+
+
+        // ==================================
+        // BEST SCORE
+        // ==================================
+
+        const scores =
+            games
+                .filter(function (game) {
+
+                    return game.completed;
+
+                })
+                .map(function (game) {
+
+                    return game.score;
+
+                });
+
+
+        let bestScore = 0;
+
+
+        if (scores.length > 0) {
+
+            bestScore =
+                Math.max(...scores);
+
+        }
+
+
+        document.getElementById(
+            "bestScore"
+        ).textContent =
+            bestScore;
+
+
+
+        // ==================================
+        // OVERALL ACCURACY
+        // ==================================
+
+        const accuracyValues =
+            games
+                .filter(function (game) {
+
+                    return game.completed;
+
+                })
+                .map(function (game) {
+
+                    return game.accuracy;
+
+                });
+
+
+        let overallAccuracy = 0;
+
+
+        if (accuracyValues.length > 0) {
+
+            const total =
+                accuracyValues.reduce(
+                    function (sum, value) {
+
+                        return sum + value;
+
+                    },
+                    0
+                );
+
+
+            overallAccuracy =
+                Math.round(
+                    total /
+                    accuracyValues.length
+                );
+
+        }
+
+
+        document.getElementById(
+            "overallAccuracy"
+        ).textContent =
+            overallAccuracy + "%";
+
+
+
+        // ==================================
+        // BEST TIME
+        // ==================================
+
+        const timeValues =
+            games
+                .filter(function (game) {
+
+                    return game.completed &&
+                           game.time > 0;
+
+                })
+                .map(function (game) {
+
+                    return game.time;
+
+                });
+
+
+        let bestTime = 0;
+
+
+        if (timeValues.length > 0) {
+
+            bestTime =
+                Math.min(...timeValues);
+
+        }
+
+
+        document.getElementById(
+            "bestTime"
+        ).textContent =
+            bestTime + "s";
+
+
+
+        // ==================================
+        // UPDATE GAME PROGRESS
+        // ==================================
+
+        function updateGameProgress(
+            game,
+            textId,
+            barId
+        ) {
+
+            const text =
+                document.getElementById(textId);
+
+            const bar =
+                document.getElementById(barId);
+
+
+            if (!game.completed) {
+
+                text.textContent =
+                    "Not Played";
+
+                bar.style.width =
+                    "0%";
+
+                return;
+
+            }
+
+
+            text.textContent =
+                game.accuracy + "%";
+
+            bar.style.width =
+                Math.min(
+                    game.accuracy,
+                    100
+                ) + "%";
+
+        }
+
+
+        updateGameProgress(
+            memory,
+            "memoryProgress",
+            "memoryBar"
+        );
+
+
+        updateGameProgress(
+            recall,
+            "recallProgress",
+            "recallBar"
+        );
+
+
+        updateGameProgress(
+            sequence,
+            "sequenceProgress",
+            "sequenceBar"
+        );
+
+
+        updateGameProgress(
+            focus,
+            "focusProgress",
+            "focusBar"
+        );
+
+
+
+        // ==================================
+        // UPDATE ACTIVITY TABLE
+        // ==================================
+
+        function updateTable(
+            game,
+            scoreId,
+            accuracyId,
+            statusId
+        ) {
+
+            const scoreElement =
+                document.getElementById(scoreId);
+
+            const accuracyElement =
+                document.getElementById(accuracyId);
+
+            const statusElement =
+                document.getElementById(statusId);
+
+
+            if (!game.completed) {
+
+                scoreElement.textContent =
+                    "—";
+
+                accuracyElement.textContent =
+                    "—";
+
+                statusElement.textContent =
+                    "Not Played";
+
+                statusElement.className =
+                    "not-played";
+
+                return;
+
+            }
+
+
+            scoreElement.textContent =
+                game.score;
+
+
+            accuracyElement.textContent =
+                game.accuracy + "%";
+
+
+            statusElement.textContent =
+                "Completed";
+
+
+            statusElement.className =
+                "good";
+
+        }
+
+
+        updateTable(
+            memory,
+            "memoryScore",
+            "memoryAccuracy",
+            "memoryStatus"
+        );
+
+
+        updateTable(
+            recall,
+            "recallScore",
+            "recallAccuracy",
+            "recallStatus"
+        );
+
+
+        updateTable(
+            sequence,
+            "sequenceScore",
+            "sequenceAccuracy",
+            "sequenceStatus"
+        );
+
+
+        updateTable(
+            focus,
+            "focusScore",
+            "focusAccuracy",
+            "focusStatus"
+        );
+
+
+
+        // ==================================
+        // RECOMMENDATION
+        // ==================================
+
+        const recommendationTitle =
+            document.getElementById(
+                "recommendationTitle"
+            );
+
+        const recommendationText =
+            document.getElementById(
+                "recommendationText"
+            );
+
+
+        if (completedGames === 0) {
+
+            recommendationTitle.textContent =
+                "Start Cognitive Training";
+
+
+            recommendationText.textContent =
+                "No games have been completed yet. " +
+                "Encourage the patient to start " +
+                "with a simple cognitive game.";
+
+        }
+
+        else if (overallAccuracy >= 80) {
+
+            recommendationTitle.textContent =
+                "Excellent Progress 🏆";
+
+
+            recommendationText.textContent =
+                "The patient is showing strong " +
+                "performance. Continue regular " +
+                "cognitive training.";
+
+        }
+
+        else if (overallAccuracy >= 60) {
+
+            recommendationTitle.textContent =
+                "Good Progress 👍";
+
+
+            recommendationText.textContent =
+                "The patient is making good progress. " +
+                "Regular practice can help maintain " +
+                "cognitive activity.";
+
+        }
+
+        else {
+
+            recommendationTitle.textContent =
+                "Keep Practicing 💪";
+
+
+            recommendationText.textContent =
+                "Encourage regular practice and " +
+                "start with games that feel comfortable.";
+
+        }
+
+    </script>
+
+</body>
+
+</html>

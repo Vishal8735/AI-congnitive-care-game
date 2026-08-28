@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Focus Challenge | AI Cognitive Care</title>
+
+    <!-- Common CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Focus Game JavaScript -->
+    <script src="focus-game.js" defer></script>
+
+</head>
+
+
+<body>
+
+    <!-- =========================
+         NAVBAR
+    ========================== -->
+
+    <header class="navbar">
+
+        <div class="logo">
+            🧠 AI Cognitive Care
+        </div>
+
+        <nav>
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="games.html">
+                Games
+            </a>
+
+            <a href="dashboard.html">
+                Dashboard
+            </a>
+
+        </nav>
+
+    </header>
+
+
+    <!-- =========================
+         GAME
+    ========================== -->
+
+    <main class="game-container">
+
+        <div class="game-card">
+
+            <p class="tag">
+                COGNITIVE TRAINING
+            </p>
+
+
+            <h1>
+                🎯 Focus Challenge
+            </h1>
+
+
+            <p class="description">
+
+                Click the moving target as quickly as you can.
+
+                <br>
+
+                You have 30 seconds!
+
+            </p>
+
+
+            <!-- =========================
+                 STATS
+            ========================== -->
+
+            <div class="stats">
+
+                <div class="stat">
+
+                    <h3 id="timer">
+                        30
+                    </h3>
+
+                    <p>
+                        Seconds
+                    </p>
+
+                </div>
+
+
+                <div class="stat">
+
+                    <h3 id="score">
+                        0
+                    </h3>
+
+                    <p>
+                        Score
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- =========================
+                 GAME AREA
+            ========================== -->
+
+            <div id="game-area">
+
+                <button
+                    id="target"
+                    type="button"
+                    aria-label="Moving target">
+                </button>
+
+            </div>
+
+
+            <!-- =========================
+                 START BUTTON
+            ========================== -->
+
+            <button
+                id="start-btn"
+                class="start-btn"
+                type="button">
+
+                Start Game
+
+            </button>
+
+
+            <!-- MESSAGE -->
+
+            <p id="message"></p>
+
+
+            <!-- =========================
+                 BACK BUTTON
+            ========================== -->
+
+            <a
+                href="games.html"
+                class="back-btn">
+
+                ← Back to Games
+
+            </a>
+
+        </div>
+
+    </main>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer>
+
+        <p>
+            © 2026 AI Cognitive Care |
+            Keep Your Mind Active 🧠
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>

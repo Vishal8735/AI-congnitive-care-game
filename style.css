@@ -1,0 +1,1404 @@
+/* =========================================
+   AI COGNITIVE CARE - MAIN STYLE
+   index.html + games.html + GAME PAGES
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f8ff;
+    color: #172554;
+    line-height: 1.5;
+}
+
+
+/* =========================================
+   NAVBAR
+========================================= */
+
+.navbar {
+    min-height: 75px;
+    background: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 7%;
+
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    color: #2563eb;
+    font-size: 21px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.navbar nav {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.navbar nav a {
+    text-decoration: none;
+    color: #334155;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.navbar nav a:hover {
+    color: #2563eb;
+}
+
+
+/* =========================================
+   LANGUAGE SELECTOR
+========================================= */
+
+.language-select {
+    padding: 8px 11px;
+
+    border: 1px solid #dbeafe;
+    border-radius: 10px;
+
+    background: white;
+    color: #172554;
+
+    font-size: 13px;
+    font-weight: bold;
+
+    cursor: pointer;
+    outline: none;
+}
+
+.language-select:focus {
+    border-color: #2563eb;
+}
+
+
+/* =========================================
+   COMMON TAG
+========================================= */
+
+.tag {
+    color: #2563eb;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+
+/* =========================================
+   INDEX - HERO
+========================================= */
+
+.hero {
+    max-width: 1150px;
+
+    margin: auto;
+    padding: 80px 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 60px;
+}
+
+.hero-text {
+    flex: 1;
+}
+
+.hero-text h1 {
+    font-size: 52px;
+    line-height: 1.15;
+
+    margin: 15px 0 20px;
+
+    color: #172554;
+}
+
+.hero-text h1 span {
+    color: #2563eb;
+}
+
+.hero-text > p:not(.tag) {
+    max-width: 600px;
+
+    color: #64748b;
+
+    font-size: 17px;
+    line-height: 1.7;
+
+    margin-bottom: 30px;
+}
+
+
+/* HERO BUTTON */
+
+.start-btn {
+    display: inline-block;
+
+    text-decoration: none;
+
+    background: #2563eb;
+    color: white;
+
+    padding: 14px 25px;
+
+    border-radius: 11px;
+
+    font-weight: bold;
+
+    box-shadow: 0 8px 20px rgba(37, 99, 235, 0.20);
+
+    transition: 0.3s;
+}
+
+.start-btn:hover {
+    background: #1d4ed8;
+    transform: translateY(-2px);
+}
+
+
+/* =========================================
+   BRAIN CARD
+========================================= */
+
+.brain-card {
+    width: 340px;
+    min-height: 300px;
+
+    flex-shrink: 0;
+
+    background: white;
+
+    border-radius: 30px;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    box-shadow: 0 15px 40px rgba(37, 99, 235, 0.10);
+
+    border: 1px solid #e8efff;
+}
+
+.brain {
+    width: 130px;
+    height: 130px;
+
+    background: #eff6ff;
+
+    border-radius: 35px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 75px;
+
+    margin-bottom: 20px;
+}
+
+.brain-card h3 {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.brain-card p {
+    color: #64748b;
+    font-size: 14px;
+}
+
+
+/* =========================================
+   INDEX - ROLES
+========================================= */
+
+.roles {
+    max-width: 1050px;
+
+    margin: auto;
+
+    padding: 70px 20px;
+
+    text-align: center;
+}
+
+.roles h2 {
+    font-size: 36px;
+    margin: 10px 0;
+}
+
+.role-description {
+    color: #64748b;
+    margin-bottom: 35px;
+}
+
+.role-container {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 25px;
+}
+
+.role-card {
+    background: white;
+
+    padding: 35px 30px;
+
+    border-radius: 25px;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+
+    border: 1px solid #eef2ff;
+
+    transition: 0.3s;
+}
+
+.role-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow: 0 15px 35px rgba(37, 99, 235, 0.10);
+}
+
+.role-icon {
+    width: 75px;
+    height: 75px;
+
+    margin: 0 auto 18px;
+
+    border-radius: 20px;
+
+    background: #eff6ff;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 38px;
+}
+
+.role-card h3 {
+    font-size: 23px;
+    margin-bottom: 10px;
+}
+
+.role-card p {
+    color: #64748b;
+
+    max-width: 400px;
+
+    margin: 0 auto 22px;
+}
+
+.role-btn {
+    display: inline-block;
+
+    text-decoration: none;
+
+    background: #2563eb;
+    color: white;
+
+    padding: 12px 20px;
+
+    border-radius: 10px;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.role-btn:hover {
+    background: #1d4ed8;
+}
+
+
+/* =========================================
+   FEATURES
+========================================= */
+
+.features {
+    max-width: 1100px;
+
+    margin: auto;
+
+    padding: 60px 20px 80px;
+
+    text-align: center;
+}
+
+.features h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+.feature-container {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+.feature {
+    background: white;
+
+    padding: 30px 20px;
+
+    border-radius: 20px;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+}
+
+.feature > div {
+    font-size: 35px;
+    margin-bottom: 12px;
+}
+
+.feature h3 {
+    margin-bottom: 8px;
+}
+
+.feature p {
+    color: #64748b;
+    font-size: 14px;
+}
+
+
+/* =========================================
+   GAMES PAGE
+========================================= */
+
+.games-page {
+    max-width: 1150px;
+
+    margin: auto;
+
+    padding: 55px 20px 70px;
+}
+
+.games-header {
+    text-align: center;
+
+    margin-bottom: 40px;
+}
+
+.games-header h1 {
+    font-size: 40px;
+
+    margin: 10px 0;
+
+    color: #172554;
+}
+
+.games-header p:last-child {
+    color: #64748b;
+
+    max-width: 650px;
+
+    margin: auto;
+}
+
+
+/* =========================================
+   GAMES - 4 CARDS IN ONE ROW
+========================================= */
+
+.games-list {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+
+/* GAME CARD */
+
+.games-list .game-card {
+    background: white;
+
+    min-height: 350px;
+
+    padding: 25px 20px;
+
+    border-radius: 22px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    text-align: center;
+
+    border: 1px solid #e8efff;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+
+    transition: 0.3s ease;
+}
+
+.games-list .game-card:hover {
+    transform: translateY(-6px);
+
+    box-shadow: 0 15px 35px rgba(37, 99, 235, 0.12);
+}
+
+
+/* NUMBER */
+
+.game-number {
+    width: 42px;
+    height: 42px;
+
+    border-radius: 12px;
+
+    background: #eff6ff;
+
+    color: #2563eb;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 19px;
+    font-weight: bold;
+
+    margin-bottom: 15px;
+}
+
+
+/* GAME ICON */
+
+.game-icon {
+    width: 75px;
+    height: 75px;
+
+    border-radius: 20px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 38px;
+
+    margin-bottom: 18px;
+}
+
+.memory-icon {
+    background: #ede9fe;
+}
+
+.recall-icon {
+    background: #fce7f3;
+}
+
+.sequence-icon {
+    background: #dbeafe;
+}
+
+.focus-icon {
+    background: #dcfce7;
+}
+
+
+/* GAME INFO */
+
+.games-list .game-info {
+    flex: 1;
+}
+
+.games-list .game-info h2 {
+    font-size: 20px;
+
+    color: #172554;
+
+    margin-bottom: 10px;
+}
+
+.games-list .game-info p {
+    color: #64748b;
+
+    font-size: 14px;
+
+    line-height: 1.5;
+}
+
+
+/* PLAY BUTTON */
+
+.games-list .play-btn {
+    display: block;
+
+    width: 100%;
+
+    margin-top: 20px;
+
+    padding: 12px 10px;
+
+    border-radius: 10px;
+
+    background: #2563eb;
+
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.games-list .play-btn:hover {
+    background: #1d4ed8;
+}
+
+
+/* =========================================
+   COMMON GAME PAGE
+   Memory / Recall / Sequence / Focus
+========================================= */
+
+.game-container {
+    max-width: 950px;
+
+    margin: 45px auto;
+
+    padding: 20px;
+}
+
+.game-card {
+    background: white;
+
+    border-radius: 25px;
+
+    padding: 35px;
+
+    text-align: center;
+
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.07);
+}
+
+.game-card h1 {
+    font-size: 38px;
+
+    margin: 12px 0;
+}
+
+.description {
+    color: #64748b;
+
+    line-height: 1.6;
+
+    margin-bottom: 25px;
+}
+
+
+/* GAME STATS */
+
+.stats {
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 15px;
+
+    margin: 25px 0;
+}
+
+.stat {
+    background: #f1f5f9;
+
+    padding: 15px 25px;
+
+    border-radius: 15px;
+
+    min-width: 120px;
+}
+
+.stat h3 {
+    font-size: 25px;
+
+    color: #2563eb;
+}
+
+.stat p {
+    color: #64748b;
+
+    font-size: 13px;
+
+    margin-top: 4px;
+}
+
+
+/* =========================================
+   MEMORY GAME
+========================================= */
+
+#gameBoard {
+    display: grid;
+
+    grid-template-columns: repeat(4, 90px);
+
+    gap: 15px;
+
+    justify-content: center;
+
+    margin: 30px auto;
+}
+
+.card {
+    width: 90px;
+    height: 90px;
+
+    border: none;
+
+    border-radius: 15px;
+
+    background: #2563eb;
+
+    color: white;
+
+    font-size: 35px;
+
+    cursor: pointer;
+
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.12);
+
+    transition: 0.2s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+
+/* =========================================
+   FOCUS GAME
+========================================= */
+
+#game-area {
+    position: relative;
+
+    width: 100%;
+
+    max-width: 700px;
+
+    height: 300px;
+
+    margin: 25px auto;
+
+    background: #eff6ff;
+
+    border: 2px dashed #bfdbfe;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+}
+
+#target {
+    position: absolute;
+
+    width: 65px;
+    height: 65px;
+
+    border-radius: 50%;
+
+    border: 6px solid white;
+
+    background: #2563eb;
+
+    cursor: pointer;
+
+    display: none;
+
+    box-shadow: 0 5px 15px rgba(37, 99, 235, 0.35);
+}
+
+#target:active {
+    transform: scale(0.85);
+}
+
+
+/* =========================================
+   COMMON BUTTONS
+========================================= */
+
+.action,
+.start-btn,
+.back-btn {
+    border: none;
+
+    padding: 12px 22px;
+
+    border-radius: 10px;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    text-decoration: none;
+}
+
+.action,
+.start-btn {
+    background: #2563eb;
+
+    color: white;
+}
+
+.action:hover,
+.start-btn:hover {
+    background: #1d4ed8;
+}
+
+.back-btn {
+    display: inline-block;
+
+    background: #e2e8f0;
+
+    color: #172554;
+
+    margin-top: 15px;
+}
+
+.back-btn:hover {
+    background: #cbd5e1;
+}
+
+
+/* =========================================
+   RESULT BOX
+========================================= */
+
+#result {
+    display: none;
+
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 20px;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.07);
+
+    margin-top: 25px;
+}
+
+
+/* =========================================
+   MESSAGE
+========================================= */
+
+#message {
+    min-height: 25px;
+
+    margin-top: 12px;
+
+    font-weight: bold;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer {
+    background: #172554;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 25px;
+
+    margin-top: 30px;
+
+    font-size: 14px;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1000px) {
+
+    .hero {
+        gap: 30px;
+    }
+
+    .hero-text h1 {
+        font-size: 43px;
+    }
+
+    .games-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 650px) {
+
+    .navbar {
+        min-height: 70px;
+
+        padding: 12px 5%;
+
+        flex-wrap: wrap;
+
+        gap: 10px;
+    }
+
+    .logo {
+        font-size: 17px;
+    }
+
+    .navbar nav {
+        gap: 10px;
+    }
+
+    .navbar nav a {
+        font-size: 12px;
+    }
+
+    .language-select {
+        font-size: 11px;
+
+        padding: 7px 8px;
+    }
+
+
+    /* HERO */
+
+    .hero {
+        flex-direction: column;
+
+        text-align: center;
+
+        padding: 50px 15px;
+
+        gap: 35px;
+    }
+
+    .hero-text h1 {
+        font-size: 34px;
+    }
+
+    .hero-text > p:not(.tag) {
+        font-size: 15px;
+    }
+
+    .brain-card {
+        width: 100%;
+
+        max-width: 350px;
+
+        min-height: 260px;
+    }
+
+
+    /* ROLES */
+
+    .roles {
+        padding: 50px 15px;
+    }
+
+    .roles h2 {
+        font-size: 29px;
+    }
+
+    .role-container {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* FEATURES */
+
+    .features {
+        padding: 45px 15px 60px;
+    }
+
+    .features h2 {
+        font-size: 28px;
+    }
+
+    .feature-container {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* GAMES */
+
+    .games-page {
+        padding: 40px 15px 60px;
+    }
+
+    .games-header h1 {
+        font-size: 30px;
+    }
+
+    .games-list {
+        grid-template-columns: 1fr;
+    }
+
+    .games-list .game-card {
+        min-height: 320px;
+    }
+
+
+    /* GAME PAGE */
+
+    .game-container {
+        margin: 25px auto;
+
+        padding: 12px;
+    }
+
+    .game-card {
+        padding: 25px 15px;
+    }
+
+    .game-card h1 {
+        font-size: 30px;
+    }
+
+
+    /* MEMORY */
+
+    #gameBoard {
+        grid-template-columns: repeat(4, 65px);
+
+        gap: 9px;
+    }
+
+    .card {
+        width: 65px;
+        height: 65px;
+
+        font-size: 25px;
+    }
+
+
+    /* FOCUS */
+
+    #game-area {
+        height: 280px;
+    }
+
+    #target {
+        width: 55px;
+        height: 55px;
+    }
+
+
+    /* STATS */
+
+    .stats {
+        gap: 10px;
+    }
+
+    .stat {
+        min-width: 100px;
+
+        padding: 12px 15px;
+    }
+
+    .stat h3 {
+        font-size: 22px;
+    }
+
+
+    footer {
+        font-size: 12px;
+
+        padding: 20px 10px;
+    }
+
+}
+
+
+/* =========================================
+   VERY SMALL MOBILE
+========================================= */
+
+@media (max-width: 380px) {
+
+    .navbar {
+        justify-content: center;
+    }
+
+    .navbar nav {
+        width: 100%;
+
+        justify-content: center;
+    }
+
+    .hero-text h1 {
+        font-size: 29px;
+    }
+
+    #gameBoard {
+        grid-template-columns: repeat(4, 58px);
+
+        gap: 7px;
+    }
+
+    .card {
+        width: 58px;
+        height: 58px;
+
+        font-size: 22px;
+    }
+
+}
+/* =====================================================
+   NUMBER SEQUENCE GAME
+   ===================================================== */
+
+#levelBox,
+#gameBox,
+#resultBox {
+    max-width: 850px;
+    margin: 40px auto;
+    padding: 35px;
+    background: white;
+    border-radius: 24px;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.08);
+    text-align: center;
+}
+
+/* GAME TITLE */
+
+.game-container > h1 {
+    text-align: center;
+    color: #2563eb;
+    font-size: 38px;
+    margin: 45px 0 25px;
+}
+
+/* DIFFICULTY */
+
+#levelBox h2 {
+    color: #172554;
+    margin-bottom: 25px;
+}
+
+#levelBox button {
+    border: none;
+    padding: 14px 25px;
+    margin: 8px;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    background: #eff6ff;
+    color: #1e40af;
+    transition: 0.25s;
+}
+
+#levelBox button:hover {
+    background: #2563eb;
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* GAME STATS */
+
+#gameBox .stats {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin: 15px 0;
+}
+
+#gameBox .stats span {
+    background: #f8fafc;
+    padding: 13px 18px;
+    border-radius: 12px;
+    color: #475569;
+    border: 1px solid #e2e8f0;
+}
+
+#gameBox .stats b {
+    color: #2563eb;
+}
+
+/* QUESTION */
+
+#gameBox h2 {
+    margin: 30px 0 20px;
+    color: #172554;
+}
+
+/* SEQUENCE */
+
+#sequence {
+    margin: 25px auto;
+    padding: 25px 15px;
+    max-width: 700px;
+    background: #eff6ff;
+    border: 2px dashed #bfdbfe;
+    border-radius: 18px;
+
+    font-size: 30px;
+    font-weight: bold;
+    color: #1e3a8a;
+
+    letter-spacing: 2px;
+}
+
+/* OPTIONS */
+
+#options {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    max-width: 600px;
+    margin: 25px auto;
+}
+
+#options button {
+    padding: 16px;
+    border: 2px solid #dbeafe;
+    border-radius: 14px;
+    background: white;
+    color: #1e3a8a;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+#options button:hover:not(:disabled) {
+    background: #2563eb;
+    color: white;
+    border-color: #2563eb;
+    transform: translateY(-3px);
+}
+
+#options button:disabled {
+    opacity: 0.65;
+    cursor: not-allowed;
+}
+
+/* MESSAGE */
+
+#message {
+    min-height: 28px;
+    margin: 18px 0;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+/* NEXT BUTTON */
+
+#nextBtn {
+    border: none;
+    padding: 13px 28px;
+    border-radius: 12px;
+    background: #2563eb;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+#nextBtn:hover:not(:disabled) {
+    background: #1d4ed8;
+    transform: translateY(-2px);
+}
+
+#nextBtn:disabled {
+    background: #cbd5e1;
+    cursor: not-allowed;
+}
+
+/* RESULT */
+
+#resultBox h2 {
+    color: #2563eb;
+    margin-bottom: 25px;
+}
+
+#resultBox .result {
+    max-width: 450px;
+    margin: 0 auto 25px;
+}
+
+#resultBox .result p {
+    display: flex;
+    justify-content: space-between;
+    background: #f8fafc;
+    padding: 14px 18px;
+    margin: 8px 0;
+    border-radius: 12px;
+    color: #475569;
+}
+
+#resultBox .result b {
+    color: #2563eb;
+}
+
+#resultBox button {
+    border: none;
+    padding: 13px 25px;
+    border-radius: 12px;
+    background: #2563eb;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#resultBox button:hover {
+    background: #1d4ed8;
+}
+
+/* BACK TO GAMES */
+
+.game-container > button:last-child {
+    display: block;
+    margin: 20px auto 40px;
+
+    border: none;
+    padding: 13px 25px;
+    border-radius: 12px;
+
+    background: #e2e8f0;
+    color: #172554;
+
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.game-container > button:last-child:hover {
+    background: #cbd5e1;
+}
+
+/* =====================================================
+   SEQUENCE GAME - MOBILE
+   ===================================================== */
+
+@media (max-width: 600px) {
+
+    #levelBox,
+    #gameBox,
+    #resultBox {
+        margin: 25px 12px;
+        padding: 22px 15px;
+        border-radius: 20px;
+    }
+
+    .game-container > h1 {
+        font-size: 30px;
+        margin: 30px 0 20px;
+    }
+
+    #levelBox button {
+        display: block;
+        width: 90%;
+        margin: 10px auto;
+    }
+
+    #gameBox .stats {
+        gap: 8px;
+    }
+
+    #gameBox .stats span {
+        flex: 1 1 100%;
+        padding: 11px;
+        font-size: 14px;
+    }
+
+    #gameBox h2 {
+        font-size: 21px;
+        margin: 25px 0 15px;
+    }
+
+    #sequence {
+        font-size: 21px;
+        padding: 20px 8px;
+        letter-spacing: 1px;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    #options {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    #options button {
+        padding: 14px 8px;
+        font-size: 18px;
+    }
+
+    #resultBox .result p {
+        font-size: 14px;
+        padding: 13px;
+    }
+}
+.sequence-back-btn {
+    display: block;
+    width: fit-content;
+    margin: 25px auto 40px;
+
+    border: none;
+    padding: 13px 25px;
+    border-radius: 12px;
+
+    background: #e2e8f0;
+    color: #172554;
+
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+
+    text-align: center;
+}
+
+.sequence-back-btn:hover {
+    background: #cbd5e1;
+}

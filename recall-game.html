@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Object Recall - MindCare</title>
+
+
+    <style>
+
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+            background: #f5f7fa;
+        }
+
+
+        h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+
+        #countdown {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+
+        #objects {
+            font-size: 55px;
+            margin: 30px auto 10px;
+            max-width: 700px;
+            line-height: 1.8;
+        }
+
+
+        #instruction {
+            font-size: 22px;
+            font-weight: bold;
+            margin-bottom: 30px;
+        }
+
+
+        #question {
+            display: none;
+        }
+
+
+        #question h2 {
+            font-size: 28px;
+        }
+
+
+        #options {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            max-width: 650px;
+            margin: 20px auto;
+        }
+
+
+        .option {
+            font-size: 40px;
+            width: 100px;
+            height: 90px;
+            margin: 10px;
+            border: 2px solid #333;
+            border-radius: 12px;
+            background: white;
+            cursor: pointer;
+        }
+
+
+        .option:hover {
+            transform: scale(1.05);
+        }
+
+
+        .option:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+
+        #result {
+            display: none;
+            max-width: 500px;
+            margin: 30px auto;
+            padding: 25px;
+            border-radius: 15px;
+            background: white;
+            border: 2px solid #ddd;
+        }
+
+
+        #result h2 {
+            font-size: 30px;
+        }
+
+
+        #result p {
+            font-size: 21px;
+            margin: 12px;
+        }
+
+
+        #playAgainBtn,
+        #backBtn {
+            font-size: 20px;
+            padding: 12px 25px;
+            margin: 10px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+
+        #playAgainBtn {
+            background: #4caf50;
+            color: white;
+        }
+
+
+        #backBtn {
+            background: #555;
+            color: white;
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <h1>🖼️ Object Recall</h1>
+
+
+    <p id="countdown">
+        Remember these objects...
+    </p>
+
+
+    <!-- OBJECTS -->
+
+    <div id="objects"></div>
+
+
+    <p id="instruction">
+        You have been given 5 seconds.
+        Look carefully.
+    </p>
+
+
+    <!-- QUESTION -->
+
+    <div id="question">
+
+        <h2>
+            🧠 Which objects did you see?
+        </h2>
+
+
+        <p>
+            Select 5 objects.
+        </p>
+
+
+        <div id="options"></div>
+
+    </div>
+
+
+    <!-- RESULT -->
+
+    <div id="result">
+
+        <h2>
+            🎉 Game Completed!
+        </h2>
+
+
+        <p>
+            🏆 Score:
+            <span id="recallScore">0</span> / 50
+        </p>
+
+
+        <p>
+            🎯 Accuracy:
+            <span id="recallAccuracy">0</span>%
+        </p>
+
+
+        <p>
+            ⏱️ Time Taken:
+            <span id="recallTime">0</span> seconds
+        </p>
+
+
+        <p>
+            ✅ Correct:
+            <span id="correctCount">0</span>
+        </p>
+
+
+        <p>
+            ❌ Incorrect:
+            <span id="wrongCount">0</span>
+        </p>
+
+
+        <p>
+            🧠 Objects Remembered:
+            <span id="rememberedCount">0</span> / 5
+        </p>
+
+
+        <p>
+            📈 Performance:
+            <span id="performance">-</span>
+        </p>
+
+
+        <button id="playAgainBtn"
+            type="button">
+
+            🔄 Play Again
+
+        </button>
+
+
+        <br>
+
+
+        
+        </button>
+
+    </div>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="recall-game.js">
+    </script>
+    <button type="button" onclick="location.href='games.html'">
+    ⬅️ Back to Games
+</button>
+
+
+</body>
+
+</html>

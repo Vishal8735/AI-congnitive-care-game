@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Sequence Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="game-container">
+
+    <h1>🔢 Number Sequence</h1>
+
+    <!-- Difficulty -->
+    <div id="levelBox">
+        <h2>Choose Difficulty</h2>
+
+        <button onclick="startGame('easy')">🟢 Easy</button>
+        <button onclick="startGame('medium')">🟡 Medium</button>
+        <button onclick="startGame('hard')">🔴 Hard</button>
+    </div>
+
+
+    <!-- Game -->
+    <div id="gameBox" style="display: none;">
+
+        <div class="stats">
+            <span>⏱️ Time: <b id="timer">00:00</b></span>
+            <span>🏆 Score: <b id="score">0</b></span>
+            <span>❓ Question: <b id="questionNo">1/10</b></span>
+        </div>
+
+        <div class="stats">
+            <span>✅ Correct: <b id="correct">0</b></span>
+            <span>❌ Wrong: <b id="wrong">0</b></span>
+            <span>📊 Accuracy: <b id="accuracy">0%</b></span>
+        </div>
+
+        <h2>Find the missing number</h2>
+
+        <div id="sequence" class="sequence"></div>
+
+        <div id="options" class="options"></div>
+
+        <p id="message"></p>
+
+        <button id="nextBtn" onclick="nextQuestion()" disabled>
+            Next ➡️
+        </button>
+
+    </div>
+
+
+    <!-- Result -->
+    <div id="resultBox" style="display: none;">
+
+        <h2>🎉 Game Complete!</h2>
+
+        <div class="result">
+            <p>🏆 Score: <b id="finalScore">0</b></p>
+            <p>⏱️ Time: <b id="finalTime">00:00</b></p>
+            <p>✅ Correct: <b id="finalCorrect">0</b></p>
+            <p>❌ Wrong: <b id="finalWrong">0</b></p>
+            <p>📊 Accuracy: <b id="finalAccuracy">0%</b></p>
+        </div>
+
+        <button onclick="playAgain()">🔄 Play Again</button>
+
+    </div>
+
+</div>
+
+<script src="sequence-game.js">
+</script>
+<button type="button" class="sequence-back-btn" onclick="location.href='games.html'">
+    ⬅️ Back to Games
+    </button>
+
+</body>
+</html>
